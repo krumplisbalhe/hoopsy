@@ -1,26 +1,19 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import './App.css'
+import Navbar from './Nav/Navbar'
+import UseViewportWidth from './Hooks/UseViewportWidth'
+import TeamCarousel from './TeamCarousel/TeamCarousel'
 
 function App() {
+  const {viewportWidth} = UseViewportWidth()
+  const mobileBreakpoint = 600
+  const isMobile = viewportWidth < mobileBreakpoint
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Navbar isMobile={isMobile} />
+      <TeamCarousel />
     </div>
-  );
+  )
 }
 
-export default App;
+export default App

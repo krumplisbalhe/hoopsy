@@ -1,0 +1,21 @@
+.teamCarousel{
+  display: flex;
+  flex-direction: row;
+  animation: slide 15s infinite linear;
+  width: 100%;
+	width: calc(250px * 14);
+
+  div{
+    height: 100px;
+		width: 250px;
+  }
+}
+
+@keyframes slide {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(calc(-250px * 7));
+  }
+}
