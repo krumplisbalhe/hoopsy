@@ -1,13 +1,18 @@
 .teamCarousel{
   display: flex;
   flex-direction: row;
-  animation: slide 15s infinite linear;
+  animation: slide 40s infinite linear;
   width: 100%;
-	width: calc(250px * 14);
+  width: calc(100px * 60);
+  mix-blend-mode: multiply;
 
-  div{
-    height: 100px;
-		width: 250px;
+  .teamLogo{
+    width: 100px;
+
+    img{
+      width: 70px;
+      cursor: pointer;
+    }
   }
 }
 
@@ -16,6 +21,6 @@
     transform: translateX(0);
   }
   to {
-    transform: translateX(calc(-250px * 7));
+    transform: translateX(calc(-100px * 30));
   }
 }

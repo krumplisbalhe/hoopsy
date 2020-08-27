@@ -6,6 +6,7 @@ import {ReactComponent as ButtonArrow} from '../../Assets/arrow.svg'
 
 function LandingPage() {
   const [scrollPosition, setScrollPosition] = useState(0)
+  const [themeColors, setThemeColors] = useState([])
 
   const handleScroll = () => {
     const position = window.pageYOffset
@@ -19,6 +20,7 @@ function LandingPage() {
     }
   }, [])
 
+  console.log(themeColors)
   // const percentage = scrollPosition/window.innerHeight*100
   // console.log(percentage)
 
@@ -34,7 +36,7 @@ function LandingPage() {
       </img>
       <a href="#sectionLogin" className="buttonWrapper">
         <button>
-          Enter
+          Log in
           <ButtonArrow />
         </button>
       </a>

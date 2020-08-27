@@ -1,18 +1,20 @@
-import React from 'react'
+import React, {useState} from 'react'
 import './TeamCarousel.scss'
+import Teams from './TeamData'
 
-function TeamCarousel() {
-  const teams=[1,2,3,4,5,6,7]
+const TeamCarousel = () => {
+  const [selectedColors, setSelectedColors] = useState(null)
+
   return (
     <div className="teamCarousel">
-      {teams.map( (item, index) =>(
-        <div className="teamLogo" key={index}>
-          {item}
+      {Teams.map( (item, index) =>(
+        <div className="teamLogo" key={index} onClick={() => setSelectedColors(item.colors[0])}>
+          <img src={require(`./../../Assets/NBA_logos/${item.logo}`)}></img>
         </div>
       ))}
-      {teams.map( (item, index) =>(
-        <div className="teamLogo" key={index}>
-          {item}
+      {Teams.map( (item, index) =>(
+        <div className="teamLogo" key={index} onClick={() => setSelectedColors(item.colors[0])}>
+          <img src={require(`./../../Assets/NBA_logos/${item.logo}`)}></img>
         </div>
       ))}
     </div>
