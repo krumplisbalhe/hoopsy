@@ -1,7 +1,7 @@
 import React, {useState} from 'react'
 import './Navbar.scss'
 
-function Navbar({}) {
+function Navbar() {
   const [isBurgerMenuOpen, toggleBurgerMenu] = useState(false)
   const handleToggleBurgerMenu = () => toggleBurgerMenu(!isBurgerMenuOpen)
   return (

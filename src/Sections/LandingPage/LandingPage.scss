@@ -1,0 +1,9 @@
+.landingPage{
+  height: calc(100vh - 80px);
+}
+
+@media (max-width: 600px){
+  .landingPage{
+    height: calc(100vh - 60px);
+  }
+}

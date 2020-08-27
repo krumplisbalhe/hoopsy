@@ -1,8 +1,9 @@
 import React from 'react'
 import './App.css'
-import Navbar from './Nav/Navbar'
+import Navbar from './Components/Nav/Navbar'
 import UseViewportWidth from './Hooks/UseViewportWidth'
-import TeamCarousel from './TeamCarousel/TeamCarousel'
+import LandingPage from './Sections/LandingPage/LandingPage'
+import LoginPage from './Sections/LoginPage/LoginPage'
 
 function App() {
   const {viewportWidth} = UseViewportWidth()
@@ -11,7 +12,8 @@ function App() {
   return (
     <div className="App">
       <Navbar isMobile={isMobile} />
-      <TeamCarousel />
+      <LandingPage />
+      <LoginPage />
     </div>
   )
 }
