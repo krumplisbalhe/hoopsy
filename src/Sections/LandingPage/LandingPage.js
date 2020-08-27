@@ -1,16 +1,42 @@
-import React from 'react'
+import React, {useEffect, useState} from 'react'
 import TeamCarousel from '../../Components/TeamCarousel/TeamCarousel'
 import Basketballer01 from '../../Assets//Basketball-01.gif'
 import './LandingPage.scss'
+import {ReactComponent as ButtonArrow} from '../../Assets/arrow.svg'
 
 function LandingPage() {
+  const [scrollPosition, setScrollPosition] = useState(0)
+
+  const handleScroll = () => {
+    const position = window.pageYOffset
+    setScrollPosition(position)
+  }
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll, {passive: true})
+    return () => {
+      window.removeEventListener('scroll', handleScroll)
+    }
+  }, [])
+
+  // const percentage = scrollPosition/window.innerHeight*100
+  // console.log(percentage)
 
   return (
     <div className="landingPage">
-      <h1>Elevate your game</h1>
-      <img src={Basketballer01} alt="Basketballer_Illustration_1"></img>
-      <a href="#sectionLogin">
-        <button>Sign in</button>
+      <h1 className="landingPageHeader">Elevate your game</h1>
+      <img
+        src={Basketballer01}
+        alt="Basketballer_Illustration_1"
+        className="landingPageIllustration"
+        style={{transform: `translateY(${scrollPosition}px)`}}
+      >
+      </img>
+      <a href="#sectionLogin" className="buttonWrapper">
+        <button>
+          Enter
+          <ButtonArrow />
+        </button>
       </a>
       <TeamCarousel />
     </div>

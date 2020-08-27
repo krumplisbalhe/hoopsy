@@ -1,9 +1,9 @@
 .navbar{
-  background-color: red;
   display: flex;
   justify-content: space-between;
   align-items: center;
   height: 80px;
+  font-weight: bold;
 
   .burger{
     display: none;

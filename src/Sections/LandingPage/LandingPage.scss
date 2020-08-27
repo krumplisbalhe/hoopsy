@@ -1,5 +1,33 @@
 .landingPage{
   height: calc(100vh - 80px);
+  display: grid;
+  grid-template-columns: 1.5fr 1.5fr;
+  grid-template-rows: 3.5fr 1.5fr 1.5fr;
+  gap: 1px 1px;
+  grid-template-areas:
+    "landingPageHeader landingPageIllustration"
+    "buttonWrapper landingPageIllustration"
+    "teamCarousel teamCarousel";
+  justify-items: center;
+  align-items: center;
+
+  .landingPageHeader{
+    grid-area: landingPageHeader;
+    padding-left: 150px;
+  }
+
+  .landingPageIllustration{
+    grid-area: landingPageIllustration;
+  }
+
+  .buttonWrapper{
+    grid-area: buttonWrapper;
+    padding-left: 150px;
+  }
+
+  .teamCarousel{
+    grid-area: teamCarousel;
+  }
 }
 
 @media (max-width: 600px){

@@ -1,0 +1,49 @@
+.App {
+  text-align: center;
+  font-family: 'Overpass', sans-serif;
+  background-color: #FFF0E1;
+
+  h1{
+    font-family: 'Rubik', sans-serif;
+    text-transform: uppercase;
+    font-size: 100px;
+  }
+
+  button{
+    padding: 5px 40px 5px 40px;
+    cursor: pointer;
+    text-decoration: none;
+    background: transparent;
+    font-family: 'Overpass', sans-serif;
+    font-weight: bold;
+    border: 2px solid black;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .buttonArrow{
+    padding-left: 40px;
+  }
+
+  a{
+    text-decoration: none;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
