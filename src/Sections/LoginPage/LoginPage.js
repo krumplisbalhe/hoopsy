@@ -2,7 +2,7 @@ import React from 'react'
 import './LoginPage.scss'
 import {ReactComponent as ButtonArrow} from '../../Assets/arrow.svg'
 
-function LoginPage() {
+const LoginPage = themeColors => {
   return (
     <div className="loginPage" id="sectionLogin">
       <div className="loginFormContainer">

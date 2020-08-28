@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState} from 'react'
 import './App.scss'
 import Navbar from './Components/Nav/Navbar'
 import UseViewportWidth from './Hooks/UseViewportWidth'
@@ -13,11 +13,15 @@ function App() {
   const {viewportWidth} = UseViewportWidth()
   const mobileBreakpoint = 600
   const isMobile = viewportWidth < mobileBreakpoint
+  const [themeColors, setThemeColors] = useState([])
+  const handleTeamClick = colors => {
+    setThemeColors(colors)
+  }
   return (
-    <div className="App">
+    <div className="App" style={{'--color1': themeColors[0], '--color2': themeColors[1]}}>
       <Navbar isMobile={isMobile} />
-      <LandingPage />
-      <LoginPage />
+      <LandingPage handleTeamClick={handleTeamClick} />
+      <LoginPage themeColors={themeColors} />
       <footer>
         <div className="copyWrite">© Hoopsy 2020</div>
         <div className="contact">Say <span>hello@hoopsy.com</span></div>

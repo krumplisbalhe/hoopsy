@@ -1,6 +1,9 @@
 $borderWidth: 0.125rem;
 
 .App {
+  --color1: black;
+  --color2: black;
+
   text-align: center;
   overflow-x: hidden;
   background-color: #FFF0E1;
@@ -18,7 +21,7 @@ $borderWidth: 0.125rem;
     background: transparent;
     font-family: 'Overpass', sans-serif;
     font-weight: bold;
-    border: $borderWidth solid black;
+    border: $borderWidth solid var(--color2);
     border-top-right-radius: 3rem;
     border-bottom-right-radius: 3rem;
     display: flex;
@@ -26,6 +29,7 @@ $borderWidth: 0.125rem;
     justify-content: space-between;
     font-size: 1rem;
     outline: none;
+    color: var(--color2);
   }
 
   .buttonArrow{
@@ -78,7 +82,7 @@ $borderWidth: 0.125rem;
 
   .styledInput:focus {
     padding-bottom: 0.5rem;
-    border-image: linear-gradient(to right, blue, green);
+    border-image: linear-gradient(to right, var(--color1), var(--color2));
     border-image-slice: 1;
 
     ~ .inputLabel {
