@@ -118,13 +118,13 @@ $borderWidth: 0.125rem;
 
     .social{
       display: flex;
-      width: 15%;
-      justify-content: space-around;
+      justify-content: space-between;
 
       svg {
         width: 1.5em;
         height: 1.5em;
         cursor: pointer;
+        padding-left: 1em;
 
         path{
           fill: currentColor;
