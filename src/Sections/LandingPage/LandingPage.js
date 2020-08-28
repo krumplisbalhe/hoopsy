@@ -6,7 +6,9 @@ import {ReactComponent as ButtonArrow} from '../../Assets/arrow.svg'
 
 function LandingPage() {
   const [scrollPosition, setScrollPosition] = useState(0)
-  // const [themeColors, setThemeColors] = useState([])
+  const [themeColors, setThemeColors] = useState([])
+
+  console.log(themeColors)
 
   const handleScroll = () => {
     const position = window.pageYOffset
@@ -20,12 +22,16 @@ function LandingPage() {
     }
   }, [])
 
+  const handleTeamClick = colors => {
+    setThemeColors(colors)
+  }
+
   // const percentage = scrollPosition/window.innerHeight*100
   // console.log(percentage)
 
   return (
     <div className="landingPage">
-      <h1 className="landingPageHeader">Elevate your game</h1>
+      <h1 className="landingPageHeader" style={{color: themeColors[0]}}>Elevate your game</h1>
       <img
         src={Basketballer01}
         alt="Basketballer_Illustration_1"
@@ -39,7 +45,7 @@ function LandingPage() {
           <ButtonArrow />
         </button>
       </a>
-      <TeamCarousel />
+      <TeamCarousel handleTeamClick={handleTeamClick} />
     </div>
   )
 }
