@@ -1,5 +1,6 @@
 import React, {useState} from 'react'
 import './Navbar.scss'
+import {ReactComponent as HoopsyLogo} from '../../Assets/Hoopsy_logo.svg'
 
 function Navbar() {
   const [isBurgerMenuOpen, toggleBurgerMenu] = useState(false)
@@ -7,7 +8,9 @@ function Navbar() {
   return (
     <div className="navbar">
       <div className="burger" onClick={handleToggleBurgerMenu}>burger</div>
-      <div className="logo">logo</div>
+      <div className="logo">
+        <HoopsyLogo />
+      </div>
       <nav className={isBurgerMenuOpen ? "burgerMenuOpen" : ""}>
         <div>Register</div>
         <div>About us</div>
