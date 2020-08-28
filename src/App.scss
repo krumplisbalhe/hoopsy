@@ -1,32 +1,32 @@
 .App {
   text-align: center;
-  font-family: 'Overpass', sans-serif;
-  background-color: #FFF0E1;
   overflow-x: hidden;
+  background-color: #FFF0E1;
 
   h1{
     font-family: 'Rubik', sans-serif;
     text-transform: uppercase;
-    font-size: 100px;
+    font-size: 6rem;
   }
 
   button{
-    padding: 5px 40px 5px 40px;
+    padding: 0.5rem 2.5rem;
     cursor: pointer;
     text-decoration: none;
     background: transparent;
     font-family: 'Overpass', sans-serif;
     font-weight: bold;
-    border: 2px solid black;
-    border-top-right-radius: 50px;
-    border-bottom-right-radius: 50px;
+    border: 0.125rem solid black;
+    border-top-right-radius: 3rem;
+    border-bottom-right-radius: 3rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    font-size: 1rem;
   }
 
   .buttonArrow{
-    padding-left: 40px;
+    padding-left: 2.5rem;
   }
 
   a{

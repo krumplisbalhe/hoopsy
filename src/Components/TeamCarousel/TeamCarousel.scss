@@ -1,17 +1,27 @@
-.teamCarousel{
-  display: flex;
-  flex-direction: row;
-  animation: slide 40s infinite linear;
-  width: 100%;
-  width: calc(100px * 60);
-  mix-blend-mode: multiply;
+.teamCarouselWrapper{
+  overflow: hidden;
 
-  .teamLogo{
-    width: 100px;
+  .teamCarousel{
+    display: flex;
+    flex-direction: row;
+    animation: slide 40s infinite linear;
+    width: 100%;
+    width: calc(6.25rem * 60);
+    mix-blend-mode: multiply;
 
-    img{
-      width: 70px;
-      cursor: pointer;
+    .teamLogo{
+      width: 6.25rem;
+
+      .teamLogoImage{
+        width: 4.5rem;
+        height: 4.5rem;
+        cursor: pointer;
+        object-fit: contain;
+
+        &.active{
+          border: red 2px solid;
+        }
+      }
     }
   }
 }
@@ -21,6 +31,6 @@
     transform: translateX(0);
   }
   to {
-    transform: translateX(calc(-100px * 30));
+    transform: translateX(calc(-6.25rem * 30));
   }
 }

@@ -1,21 +1,19 @@
 .landingPage{
   height: calc(100vh - 80px);
   display: grid;
-  grid-template-columns: 1.5fr 1.5fr;
+  grid-template-columns: 150px 1.5fr 1.5fr;
   grid-template-rows: 3fr 2fr 1.5fr;
   gap: 1px 1px;
   grid-template-areas:
-    "landingPageHeader landingPageIllustration"
-    "buttonWrapper landingPageIllustration"
-    "teamCarousel teamCarousel";
+    ". landingPageHeader landingPageIllustration"
+    ". buttonWrapper landingPageIllustration"
+    "teamCarousel teamCarousel teamCarousel";
   justify-items: center;
   align-items: center;
 
   .landingPageHeader{
     grid-area: landingPageHeader;
-    padding-left: 150px;
-    margin-bottom: 0;
-    margin-top: 30px;
+    margin: 0;
   }
 
   .landingPageIllustration{
@@ -24,16 +22,37 @@
 
   .buttonWrapper{
     grid-area: buttonWrapper;
-    padding-left: 150px;
   }
 
-  .teamCarousel{
+  .teamCarouselWrapper{
     grid-area: teamCarousel;
   }
 }
 
-@media (max-width: 600px){
+@media (max-width: 1050px){
   .landingPage{
+    grid-template-columns: 50px 1.5fr 1.5fr;
+  }
+}
+
+@media (max-width: 900px){
+  .landingPage{
+    width: 100vw;
     height: calc(100vh - 60px);
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+    "landingPageIllustration"
+    "landingPageHeader"
+    "buttonWrapper"
+    "teamCarousel";
+  }
+}
+
+@media (max-width: 600px) {
+  .landingPage{
+    .landingPageHeader{
+      font-size: 5rem;
+    }
   }
 }
