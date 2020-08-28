@@ -1,3 +1,5 @@
+$borderWidth: 0.125rem;
+
 .App {
   text-align: center;
   overflow-x: hidden;
@@ -16,13 +18,14 @@
     background: transparent;
     font-family: 'Overpass', sans-serif;
     font-weight: bold;
-    border: 0.125rem solid black;
+    border: $borderWidth solid black;
     border-top-right-radius: 3rem;
     border-bottom-right-radius: 3rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
     font-size: 1rem;
+    outline: none;
   }
 
   .buttonArrow{
@@ -31,6 +34,109 @@
 
   a{
     text-decoration: none;
+  }
+
+  .inputWrapper {
+    position: relative;
+    padding-top: 1rem;
+    margin-top: 3rem;
+    width: 50%;
+  }
+
+  .styledInput {
+    font-family: 'Overpass', sans-serif;
+    width: 100%;
+    border: 0;
+    border-bottom: $borderWidth solid black;
+    outline: 0;
+    font-size: 1.3rem;
+    color: black;
+    padding: 0.5rem 0;
+    background: transparent;
+    transition: border-color 0.2s;
+    height: 1.5rem;
+
+    &::placeholder {
+      color: transparent;
+    }
+
+    &:placeholder-shown ~ .inputLabel {
+      font-size: 1.3rem;
+      cursor: text;
+      top: 1.5rem;
+    }
+  }
+
+  .inputLabel {
+    position: absolute;
+    top: 0;
+    display: block;
+    transition: 0.2s;
+    font-size: 1rem;
+    color: black;
+  }
+
+  .styledInput:focus {
+    padding-bottom: 0.5rem;
+    border-image: linear-gradient(to right, blue, green);
+    border-image-slice: 1;
+
+    ~ .inputLabel {
+      position: absolute;
+      top: 0;
+      display: block;
+      transition: 0.2s;
+      font-size: 1rem;
+      font-weight: 700;
+    }
+  }
+
+  .styledInput{
+    &:required,&:invalid {
+      box-shadow:none;
+    }
+  }
+
+  footer{
+    display: flex;
+    height: 3rem;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2rem;
+    color: #7E7E7E;
+
+    .contact{
+      span{
+        font-weight: bold;
+        cursor: pointer;
+      }
+
+      &:hover{
+        color: black;
+      }
+    }
+
+    .social{
+      display: flex;
+      width: 15%;
+      justify-content: space-around;
+
+      svg {
+        width: 1.5em;
+        height: 1.5em;
+        cursor: pointer;
+
+        path{
+          fill: currentColor;
+        }
+
+        &:hover{
+          path{
+            fill: black;
+          }
+        }
+      }
+    }
   }
 }
 

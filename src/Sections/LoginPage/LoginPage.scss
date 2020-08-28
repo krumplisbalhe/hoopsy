@@ -1,3 +1,27 @@
 .loginPage{
-  height: 100vh;
+  height: calc(100vh - 3rem);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .loginFormContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 50%;
+    width: 50%;
+
+    button{
+      margin-top: 4rem;
+    }
+
+    .forgotPassword{
+      margin-top: 1.5rem;
+
+      span{
+        font-weight: bold;
+        cursor: pointer;
+      }
+    }
+  }
 }
