@@ -8,7 +8,7 @@
   .teamCarousel{
     display: flex;
     flex-direction: row;
-    animation: slide 40s infinite linear;
+    animation: slide 60s infinite linear;
     width: calc(6.25rem * 60);
     mix-blend-mode: multiply;
 
@@ -23,7 +23,7 @@
         border-radius: 50%;
 
         &.active{
-          box-shadow: 0 0 0 3px #FFEBD6;
+          box-shadow: 0 0 0 2px var(--color1);
         }
       }
     }
