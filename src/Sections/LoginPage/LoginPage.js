@@ -1,40 +1,41 @@
 import React, {useState, useEffect} from 'react'
 import './LoginPage.scss'
 import {ReactComponent as ButtonArrow} from '../../Assets/arrow.svg'
+import Toast from '../../Components/Toast/Toast'
 
-const LoginPage = themeColors => {
+const LoginPage = () => {
   const [userEmail, setUserEmail] = useState('')
   const [userPassword, setUserPassword] = useState('')
-  const [errorMessage, setErrorMessage] = useState(null)
+  const [feedbackMessage, setFeedbackMessage] = useState(null)
 
   const formValidation = () => {
     if (userEmail !== 'rita@goco.dk') {
-      setErrorMessage('This user doesn\t exist')
+      setFeedbackMessage('This user doesn\'t exist')
     }
     else if (userPassword !== 'GOodCOmpany') {
-      setErrorMessage('Wrong password. Try again!')
+      setFeedbackMessage('Wrong password. Try again!')
     }
     else {
-      setErrorMessage(null)
       localStorage.setItem('userEmail', userEmail)
       setUserPassword('')
       setUserEmail('')
+      setFeedbackMessage(`Hello ${localStorage.getItem('userEmail')}.`)
     }
   }
 
   const handleSubmit = e => {
-    setErrorMessage(null)
+    setFeedbackMessage(null)
     e.preventDefault()
     formValidation()
   }
 
   useEffect(() => {
-    (userPassword === '' && userEmail === '') && setErrorMessage(null)
+    (userPassword === '' && userEmail === '' && !localStorage.getItem('userEmail')) && setFeedbackMessage(null)
   }, [userPassword, userEmail])
 
   return (
     <div className="loginPage" id="sectionLogin">
-      {errorMessage && <p>{errorMessage}</p>}
+      {feedbackMessage && <Toast message={feedbackMessage} />}
       <form className="loginFormContainer" onSubmit={handleSubmit}>
         <div className="inputWrapper">
           <input type="input" className="styledInput" placeholder="Email" name="email" value={userEmail} onChange={e=>setUserEmail(e.target.value)} required />
