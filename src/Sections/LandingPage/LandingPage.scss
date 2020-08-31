@@ -24,15 +24,15 @@
     align-items: center;
     position: relative;
 
-    svg path{
-      stroke-width: 1px;
-    }
-
     .ball{
       width: 4rem;
       position: absolute;
       left: 40%;
       top: 40%;
+    }
+
+    svg > path{
+      stroke-width: 2;
     }
   }
 
@@ -47,28 +47,19 @@
 
 @media (max-width: 1050px){
   .landingPage{
-    grid-template-columns: 50px 1.5fr 1.5fr;
+    grid-template-columns: 0px 1.5fr 1.5fr;
   }
 }
 
-@media (max-width: 900px){
+@media (max-width: 900px) {
   .landingPage{
-    width: 100vw;
     height: calc(100vh - 60px);
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 2fr;
     grid-template-areas:
     "landingPageIllustration"
-    "landingPageHeader"
+    "landingPageHeader "
     "buttonWrapper"
     "teamCarousel";
-  }
-}
-
-@media (max-width: 600px) {
-  .landingPage{
-    .landingPageHeader{
-      font-size: 5rem;
-    }
   }
 }
