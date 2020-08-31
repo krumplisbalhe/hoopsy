@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
 import './Navbar.scss'
-import {ReactComponent as HoopsyLogo} from '../../Assets/Hoopsy_logo.svg'
+import {ReactComponent as HoopsyLogo} from '../../Assets/HoopsyLogo.svg'
 
 function Navbar() {
   const [isBurgerMenuOpen, toggleBurgerMenu] = useState(false)
