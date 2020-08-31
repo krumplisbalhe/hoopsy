@@ -20,6 +20,20 @@
 
   .landingPageIllustration{
     grid-area: landingPageIllustration;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+    svg path{
+      stroke-width: 1px;
+    }
+
+    .ball{
+      width: 4rem;
+      position: absolute;
+      left: 40%;
+      top: 40%;
+    }
   }
 
   .buttonWrapper{

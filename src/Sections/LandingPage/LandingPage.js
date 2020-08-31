@@ -1,10 +1,11 @@
 import React, {useEffect, useState} from 'react'
 import TeamCarousel from '../../Components/TeamCarousel/TeamCarousel'
-import Basketballer01 from '../../Assets//Basketball-01.gif'
+import {ReactComponent as Basketballer01} from '../../Assets//Player.svg'
 import './LandingPage.scss'
 import {ReactComponent as ButtonArrow} from '../../Assets/arrow.svg'
+import {ReactComponent as Ball} from '../../Assets/bball.svg'
 
-const LandingPage = ({handleTeamClick, themeColors}) => {
+const LandingPage = ({handleTeamClick}) => {
   const [scrollPosition, setScrollPosition] = useState(0)
 
   const handleScroll = () => {
@@ -19,19 +20,20 @@ const LandingPage = ({handleTeamClick, themeColors}) => {
     }
   }, [])
 
-  // const percentage = scrollPosition/window.innerHeight*100
-  // console.log(percentage)
+  const percentage = scrollPosition/window.innerHeight*100
+  console.log(percentage)
 
   return (
     <div className="landingPage">
       <h1 className="landingPageHeader">Elevate your game</h1>
-      <img
-        src={Basketballer01}
-        alt="Basketballer_Illustration_1"
-        className="landingPageIllustration"
-        style={{transform: `translateY(${scrollPosition}px)`}}
-      >
-      </img>
+      <div className="landingPageIllustration">
+        <Basketballer01
+        />
+        <Ball
+          className="ball"
+          style={{transform: `translateY(${scrollPosition}px) rotate(${scrollPosition}deg)`}}
+        />
+      </div>
       <a href="#sectionLogin" className="buttonWrapper">
         <button>
           Log in
