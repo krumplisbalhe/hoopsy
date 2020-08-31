@@ -7,7 +7,11 @@ function Navbar() {
   const handleToggleBurgerMenu = () => toggleBurgerMenu(!isBurgerMenuOpen)
   return (
     <div className="navbar">
-      <div className="burger" onClick={handleToggleBurgerMenu}>burger</div>
+      <div className="burger" onClick={handleToggleBurgerMenu}>
+        <div className="burgerLine"></div>
+        <div className="burgerLine"></div>
+        <div className="burgerLine"></div>
+      </div>
       <div className="logo">
         <HoopsyLogo />
       </div>

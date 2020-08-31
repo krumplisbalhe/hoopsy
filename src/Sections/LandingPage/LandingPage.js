@@ -1,9 +1,9 @@
 import React, {useEffect, useState} from 'react'
 import TeamCarousel from '../../Components/TeamCarousel/TeamCarousel'
-import {ReactComponent as Basketballer01} from '../../Assets//Player.svg'
+import {ReactComponent as Player} from '../../Assets//Player.svg'
 import './LandingPage.scss'
 import {ReactComponent as ButtonArrow} from '../../Assets/arrow.svg'
-import {ReactComponent as Ball} from '../../Assets/bball.svg'
+import {ReactComponent as Ball} from '../../Assets/Ball.svg'
 
 const LandingPage = ({handleTeamClick}) => {
   const [scrollPosition, setScrollPosition] = useState(0)
@@ -27,7 +27,7 @@ const LandingPage = ({handleTeamClick}) => {
     <div className="landingPage">
       <h1 className="landingPageHeader">Elevate your game</h1>
       <div className="landingPageIllustration">
-        <Basketballer01
+        <Player
         />
         <Ball
           className="ball"
