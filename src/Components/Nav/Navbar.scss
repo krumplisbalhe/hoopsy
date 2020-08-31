@@ -29,10 +29,11 @@
   }
 }
 
-@media (max-width: 600px){
+@media (max-width: 900px){
   .navbar{
     justify-content: center;
     height: 60px;
+    position: relative;
 
     .logo{
       svg{
@@ -42,19 +43,34 @@
 
     .burger{
       display: inline;
+      position: absolute;
+      left: 20px;
+      cursor: pointer;
+        div {
+          width: 2rem;
+          height: 2px;
+          background-color: black;
+          margin: 5px 0;
+        }
     }
 
     nav{
+      text-align: left;
       position: absolute;
       top: 60px;
+      padding: 1rem;
+      width: 6rem;
       left: 0;
-      height: calc(100vh - 60px);
       flex-direction: column;
-      background-color: pink;
+      background-color: #FFF0E1;
       display: none;
 
       &.burgerMenuOpen{
         display: flex;
+      }
+
+      .burgerLine{
+        padding: 1rem;
       }
     }
   }
