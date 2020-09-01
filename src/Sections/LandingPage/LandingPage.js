@@ -1,9 +1,9 @@
 import React, {useEffect, useState} from 'react'
 import TeamCarousel from '../../Components/TeamCarousel/TeamCarousel'
 import {ReactComponent as Player} from '../../Assets//Player.svg'
-import './LandingPage.scss'
 import {ReactComponent as ButtonArrow} from '../../Assets/arrow.svg'
 import {ReactComponent as Ball} from '../../Assets/Ball.svg'
+import './LandingPage.scss'
 
 const LandingPage = ({handleTeamClick}) => {
   const [scrollPosition, setScrollPosition] = useState(0)
@@ -20,15 +20,11 @@ const LandingPage = ({handleTeamClick}) => {
     }
   }, [])
 
-  const percentage = scrollPosition/window.innerHeight*100
-  console.log(percentage)
-
   return (
     <div className="landingPage">
       <h1 className="landingPageHeader">Elevate your game</h1>
       <div className="landingPageIllustration">
-        <Player
-        />
+        <Player />
         <Ball
           className="ball"
           style={{transform: `translateY(${scrollPosition}px) rotate(${scrollPosition}deg)`}}

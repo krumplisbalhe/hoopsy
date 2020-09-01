@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react'
-import './LoginPage.scss'
 import {ReactComponent as ButtonArrow} from '../../Assets/arrow.svg'
 import Toast from '../../Components/Toast/Toast'
+import './LoginPage.scss'
 
 const LoginPage = () => {
   const [userEmail, setUserEmail] = useState('')
@@ -39,11 +39,27 @@ const LoginPage = () => {
       {feedbackMessage && <Toast message={feedbackMessage} />}
       <form className="loginFormContainer" onSubmit={handleSubmit}>
         <div className="inputWrapper">
-          <input type="input" className="styledInput" placeholder="Email" name="email" value={userEmail} onChange={e=>setUserEmail(e.target.value)} required />
+          <input
+            type="input"
+            className="styledInput"
+            placeholder="Email"
+            name="email"
+            value={userEmail}
+            onChange={e=>setUserEmail(e.target.value)}
+            required
+          />
           <label htmlFor="email" className="inputLabel">Email</label>
         </div>
         <div className="inputWrapper">
-          <input type="password" className="styledInput" placeholder="Password" name="password" value={userPassword} onChange={e=>setUserPassword(e.target.value)} required />
+          <input
+            type="password"
+            className="styledInput"
+            placeholder="Password"
+            name="password"
+            value={userPassword}
+            onChange={e=>setUserPassword(e.target.value)}
+            required
+          />
           <label htmlFor="password" className="inputLabel">Password</label>
         </div>
         <button>

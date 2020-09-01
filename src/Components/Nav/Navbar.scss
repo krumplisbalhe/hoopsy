@@ -1,51 +1,52 @@
-.navbar{
+.navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
   height: 100px;
   font-weight: bold;
 
-  .burger{
+  .burger {
     display: none;
   }
 
-  .logo{
+  .logo {
     padding-left: 1.5rem;
     cursor: pointer;
 
-    svg{
+    svg {
       width: 8em;
     }
   }
 
-  nav{
+  nav {
     display: flex;
     justify-content: space-around;
     width: 50%;
 
-    div{
+    div {
       cursor: pointer;
     }
   }
 }
 
-@media (max-width: 900px){
+@media (max-width: 900px) {
   .navbar{
     justify-content: center;
     height: 60px;
     position: relative;
 
-    .logo{
-      svg{
+    .logo {
+      svg {
         width: 6em;
       }
     }
 
-    .burger{
+    .burger {
       display: inline;
       position: absolute;
       left: 20px;
       cursor: pointer;
+
         div {
           width: 2rem;
           height: 2px;
@@ -54,7 +55,7 @@
         }
     }
 
-    nav{
+    nav {
       text-align: left;
       position: absolute;
       top: 60px;
@@ -65,11 +66,11 @@
       background-color: #FFF0E1;
       display: none;
 
-      &.burgerMenuOpen{
+      &.burgerMenuOpen {
         display: flex;
       }
 
-      .burgerLine{
+      .burgerLine {
         padding: 1rem;
       }
     }

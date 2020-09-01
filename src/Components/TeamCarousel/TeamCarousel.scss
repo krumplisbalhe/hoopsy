@@ -1,28 +1,28 @@
-.teamCarouselWrapper{
+.teamCarouselWrapper {
   overflow: hidden;
   height: 100%;
   width: 100%;
   display: flex;
   align-items: center;
 
-  .teamCarousel{
+  .teamCarousel {
     display: flex;
     flex-direction: row;
     animation: slide 60s infinite linear;
     width: calc(6.25rem * 60);
     mix-blend-mode: multiply;
 
-    .teamLogo{
+    .teamLogo {
       width: 6.25rem;
 
-      .teamLogoImage{
+      .teamLogoImage {
         width: 4rem;
         height: 4rem;
         cursor: pointer;
         object-fit: contain;
         border-radius: 50%;
 
-        &.active{
+        &.active {
           box-shadow: 0 0 0 2px var(--color2);
         }
       }

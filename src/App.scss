@@ -8,13 +8,13 @@ $borderWidth: 0.125rem;
   overflow-x: hidden;
   background-color: #FFF0E1;
 
-  h1{
+  h1 {
     font-family: 'Rubik', sans-serif;
     text-transform: uppercase;
     font-size: 6rem;
   }
 
-  button{
+  button {
     padding: 0.5rem 2.5rem;
     cursor: pointer;
     text-decoration: none;
@@ -32,11 +32,11 @@ $borderWidth: 0.125rem;
     color: var(--color2);
   }
 
-  .buttonArrow{
+  .buttonArrow {
     padding-left: 2.5rem;
   }
 
-  a{
+  a {
     text-decoration: none;
   }
 
@@ -96,13 +96,13 @@ $borderWidth: 0.125rem;
     }
   }
 
-  .styledInput{
+  .styledInput {
     &:required,&:invalid {
       box-shadow:none;
     }
   }
 
-  footer{
+  footer {
     display: flex;
     height: 3rem;
     align-items: center;
@@ -110,18 +110,18 @@ $borderWidth: 0.125rem;
     padding: 0 2rem;
     color: #7E7E7E;
 
-    .contact{
-      span{
+    .contact {
+      span {
         font-weight: bold;
         cursor: pointer;
       }
 
-      &:hover{
+      &:hover {
         color: black;
       }
     }
 
-    .social{
+    .social {
       display: flex;
       justify-content: space-between;
 
@@ -131,12 +131,12 @@ $borderWidth: 0.125rem;
         cursor: pointer;
         padding-left: 1em;
 
-        path{
+        path {
           fill: currentColor;
         }
 
-        &:hover{
-          path{
+        &:hover {
+          path {
             fill: black;
           }
         }

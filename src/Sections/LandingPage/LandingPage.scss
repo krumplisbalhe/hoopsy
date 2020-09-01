@@ -1,4 +1,4 @@
-.landingPage{
+.landingPage {
   height: calc(100vh - 100px);
   display: grid;
   grid-template-columns: 150px 1.5fr 1.5fr;
@@ -12,40 +12,40 @@
   justify-items: center;
   align-items: center;
 
-  .landingPageHeader{
+  .landingPageHeader {
     grid-area: landingPageHeader;
     margin: 0;
     color: var(--color1);
   }
 
-  .landingPageIllustration{
+  .landingPageIllustration {
     grid-area: landingPageIllustration;
     justify-content: center;
     align-items: center;
     position: relative;
 
-    .ball{
+    .ball {
       width: 4rem;
       position: absolute;
       left: 40%;
       top: 40%;
     }
 
-    svg > path{
+    svg > path {
       stroke-width: 2;
     }
   }
 
-  .buttonWrapper{
+  .buttonWrapper {
     grid-area: buttonWrapper;
   }
 
-  .teamCarouselWrapper{
+  .teamCarouselWrapper {
     grid-area: teamCarousel;
   }
 }
 
-@media (max-width: 1050px){
+@media (max-width: 1050px) {
   .landingPage{
     grid-template-columns: 0px 1.5fr 1.5fr;
   }
