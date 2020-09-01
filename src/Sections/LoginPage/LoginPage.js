@@ -10,7 +10,7 @@ const LoginPage = () => {
 
   const formValidation = () => {
     if (userEmail !== 'rita@goco.dk') {
-      setFeedbackMessage('This user doesn\'t exist')
+      setFeedbackMessage('This user doesn\'t exist.')
     }
     else if (userPassword !== 'GOodCOmpany') {
       setFeedbackMessage('Wrong password. Try again!')
@@ -21,6 +21,7 @@ const LoginPage = () => {
       setUserEmail('')
       setFeedbackMessage(`Hello ${localStorage.getItem('userEmail')}.`)
     }
+    setTimeout(() => setFeedbackMessage(null), 3000)
   }
 
   const handleSubmit = e => {

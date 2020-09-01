@@ -1,11 +1,28 @@
 .toast{
   width: 20rem;
-  height: 5rem;
+  height: 3rem;
   background-color: white;
-  opacity: 0.6;
   position: absolute;
   top: 2rem;
   display: flex;
   align-items: center;
   justify-content: center;
+  border-radius: 50px;
+  animation: fade 3s;
+}
+
+@keyframes fade{
+  0% {
+    opacity: 0;
+  }
+  20% {
+    opacity:1;
+  }
+  80% {
+    opacity:1;
+  }
+  100% {
+    opacity:0;
+  }
+
 }
