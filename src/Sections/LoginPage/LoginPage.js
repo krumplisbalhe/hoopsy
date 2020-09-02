@@ -12,6 +12,8 @@ const LoginPage = () => {
     if (userEmail !== 'rita@goco.dk') {
       setFeedbackMessage('This user doesn\'t exist.')
     }
+    //Password should be hashed in the backend.
+    //We don't hash in the frontend, because of pass the hash attacks.
     else if (userPassword !== 'GOodCOmpany') {
       setFeedbackMessage('Wrong password. Try again!')
     }
